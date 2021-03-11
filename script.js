@@ -11,3 +11,34 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     return false
   }
 }
+
+// Create a function with two arguments that will return an array of the first (n) multiples of (x).
+// Assume both the given number and the number of times to count will be positive numbers greater than 0.
+// Return the results as an array (or list in Python, Haskell or Elixir).
+
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i <= n; i++){
+    z.push(i * x)
+  }
+  return z;
+}
+
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
+// You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, 
+// there shouldn't be a space at the beginning or the end of the sentence!
+
+function smash (words) {
+  "use strict";
+  return words.join(" ")
+}
+
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+function simpleMultiplication(number) {
+  if (number%2 === 0) {
+    return number*8
+  } else {
+    return number*9
+  }
+}
