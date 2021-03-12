@@ -42,3 +42,27 @@ function simpleMultiplication(number) {
     return number*9
   }
 }
+
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". 
+// Input will always be valid, i.e. no negative integers.
+
+const countSheep = num => {
+  let sheep = ""
+  for (let i = 1; i <= num; i++) {
+    sheep += `${i} sheep...`
+  }
+  return sheep
+}
+
+// Rock Paper Scissors
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    return 'Draw!'
+  } else if (p1 == 'rock' && p2 == 'scissors' || p1 == 'paper' && p2 == 'rock' || p1 == 'scissors' && p2 == 'paper') {
+    return 'Player 1 won!'
+  } else {
+    return 'Player 2 won!'
+  }
+};
