@@ -71,19 +71,14 @@ const rps = (p1, p2) => {
 // The string can contain any char.
 
 function XO(str) {
-  let x = '0'
-  let o = '0'
+  let sum = ""
   for (let i = 0; i < str.length; i++) {
-    if (str[i] === 'x') {
-      x += 1
-    } else if (str[i] === 'o') {
-      o += 1
+    if (str[i].toLowerCase() == 'x'){
+      sum++
+    }
+    if (str[i].toLowerCase() == 'o'){
+      sum--
     }
   }
-  console.log(x, o)
-  if (x === o) {
-    return true
-  } else {
-    return false
-  }
+  return sum == 0
 }
