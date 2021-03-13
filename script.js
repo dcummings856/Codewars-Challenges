@@ -66,3 +66,24 @@ const rps = (p1, p2) => {
     return 'Player 2 won!'
   }
 };
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. 
+// The string can contain any char.
+
+function XO(str) {
+  let x = '0'
+  let o = '0'
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'x') {
+      x += 1
+    } else if (str[i] === 'o') {
+      o += 1
+    }
+  }
+  console.log(x, o)
+  if (x === o) {
+    return true
+  } else {
+    return false
+  }
+}
