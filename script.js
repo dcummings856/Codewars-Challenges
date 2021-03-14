@@ -82,3 +82,26 @@ function XO(str) {
   }
   return sum == 0
 }
+
+// Write a function to split a string and convert it into an array of words. 
+
+function stringToArray(string){
+  return string.split(' ')
+}
+
+// Write a function which receives as inputs two arrays: one containing the attacker's die rolls in no particular order; the other 
+// the defender's die rolls again in no particular order, and returns the result of the battle as a two element array containing the 
+// numbers of units lost by the attacker and the defender respectively.
+
+// Some players who find the standard game a bit too slow paced have adopted house rules for big battles in which one or both players 
+// may be permiited to roll more than 2 or 3 dice at the same time. The function should provide for this situation, and return an 
+// appropriate outcome to the big battle.
+
+function battleOutcome(attacker, defender) {
+  const a = attacker.sort((a,b) => b-a);
+  const b = defender.sort((a,b) => b-a);
+  const result = [0, 0];
+  while (a.length > 0 && b.length > 0)
+    result[a.shift() > b.shift() ? 1 : 0]++;
+  return result;
+}
