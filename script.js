@@ -105,3 +105,14 @@ function battleOutcome(attacker, defender) {
     result[a.shift() > b.shift() ? 1 : 0]++;
   return result;
 }
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they 
+// are not capitalized in the same way he originally typed them.
+
+String.prototype.toJadenCase = function () {
+  let splitStr = this.split(' ')
+  for (let i = 0; i < splitStr.length; i++) {
+    splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1)
+  }
+  return splitStr.join(" ")
+};
