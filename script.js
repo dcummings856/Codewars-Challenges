@@ -116,3 +116,77 @@ String.prototype.toJadenCase = function () {
   }
   return splitStr.join(" ")
 };
+
+// Your function takes two arguments:
+// current father's age (years)
+// current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+
+function twiceAsOld(dad, son) {
+  if (son * 2 > dad) {
+    return (son * 2) - dad
+  } else {
+  return dad - (son * 2)
+  }
+}
+
+// You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc 
+// order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+function mergeArrays(arr1, arr2) {
+  let concatArr = arr1.concat(arr2)
+  let newArr = []
+  for (let i = 0; i < concatArr.length; i ++) {
+    if (newArr.indexOf(concatArr[i]) === -1) {
+      newArr.push(concatArr[i])
+    }
+  }
+  return newArr.sort((a, b) => {
+    return a - b
+  })
+}
+
+// Simple challenge - eliminate all bugs from the supplied code so that the code runs and outputs the expected value. Output should be the length 
+// of the longest word, as a number.
+// There will only be one 'longest' word.
+
+//BUGGED CODE
+/* function findLongest(str) (
+  
+  var spl = str.split(" ");
+  var longest = 0
+  
+  for (var i = 0; i > spl.length; i+) (
+    if (spl(i).length > longest) {
+      longest = spl[i].length
+    )
+    }
+    return longest
+)*/
+
+//DEBUGGED CODE
+function findLongest(str) {
+  
+  var spl = str.split(" ");
+  var longest = 0
+  
+  for (var i = 0; i < spl.length; i++) {
+    if (spl[i].length > longest) {
+      longest = spl[i].length
+    }
+  }
+    return longest
+}
+
+// Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+
+// If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+var Ball = function(ballType) {
+  this.ballType = ballType
+  
+  if (this.ballType == undefined) {
+    this.ballType = 'regular'
+  }
+  
+};
