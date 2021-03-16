@@ -190,3 +190,41 @@ var Ball = function(ballType) {
   }
   
 };
+
+// Write a function, gooseFilter, that takes an array of strings as an argument and returns a filtered array
+// containing the same elements but with the 'geese' removed.
+
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(b => !geese.includes(b));
+};
+
+// This method, which is supposed to return the result of dividing its first argument by its second, isn't always returning correct values. Fix it.
+
+const solve = (x, y) => x / y
+
+// The code provided is supposed replace all the dots . in the specified String str with dashes -
+// But it's not working properly.
+
+var replaceDots = function(str) {
+  return str.replace(/\./g,'-');
+}
+
+// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+function problem(x){
+  if (x !== Number(x)) {
+    return 'Error'
+  } else {
+    return x * 50 + 6
+  }
+}
+
+// I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the 
+ //wrong number.
+// Can you help me fix the function?
+
+function addFive(num) {
+  var total = num + 5
+  return total
+}
