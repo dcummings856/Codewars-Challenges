@@ -221,10 +221,41 @@ function problem(x){
 }
 
 // I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the 
- //wrong number.
+// wrong number.
 // Can you help me fix the function?
 
 function addFive(num) {
   var total = num + 5
   return total
 }
+
+//In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have function with one side of the DNA (string, except for Haskell); you 
+//need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+function DNAStrand(dna){
+  //your code here
+  var result= "";
+      for(var i =0; i<dna.length; i++) 
+      {
+        if (dna[i]==="A") 
+       {
+        result +="T";
+       }
+        else if (dna[i]==="T") 
+       {
+        result += "A";
+        }
+        else if (dna[i]==="C")
+        {
+        result +="G";
+        }
+        else if (dna[i]==="G")
+        {
+        result += "C";
+        }
+        else {
+        result +=dna[i];
+        }
+     }
+     return result;
+  }
