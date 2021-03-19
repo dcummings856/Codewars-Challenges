@@ -285,3 +285,34 @@ function position(letter){
     }
   }
 }
+
+// Make a function that receive age, and return what they drink.
+
+function peopleWithAgeDrink(old) {
+  if (old < 14) {
+    return 'drink toddy'
+  } else if (old < 18) {
+    return 'drink coke'
+  } else if (old < 21) {
+    return 'drink beer'
+  } else {
+    return 'drink whisky'
+  }
+}
+
+// Bob needs a fast way to calculate the volume of a cuboid with three values: length, width and the height of the cuboid. Write a function to help Bob with this 
+// calculation.
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height
+  }
+}
+
+// You are given two interior angles (in degrees) of a triangle.
+// Write a function to return the 3rd.
+// Note: only positive integers will be tested.
+
+function otherAngle(a, b) {
+  return 180 - (a + b)
+}
