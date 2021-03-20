@@ -316,3 +316,34 @@ class Kata {
 function otherAngle(a, b) {
   return 180 - (a + b)
 }
+
+// Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see 
+// the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter
+
+String.prototype.toAlternatingCase = function () {
+  return this.split('').map(function(x){
+    if(x >= 'A' && x <= 'Z') return x.toLowerCase();
+    if(x >= 'a' && x <= 'z') return x.toUpperCase();
+    return x;
+  }).join(''); 
+}
+
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array 
+// (true means present).
+
+function countSheeps(arrayOfSheep) {
+  let num = 0;
+  
+  for(let i = 0; i < arrayOfSheep.length; i++)
+    if(arrayOfSheep[i] == true)
+      num++;
+      
+  return num;
+}
+
+// The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
+// Given a year, return the century it is in.
+
+function century(year) {
+  return Math.ceil(year/100)
+}
