@@ -347,3 +347,33 @@ function countSheeps(arrayOfSheep) {
 function century(year) {
   return Math.ceil(year/100)
 }
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+
+function abbrevName(name){
+  let abbrev = name.split(" ")
+  return `${abbrev[0].charAt(0).toUpperCase()}.${abbrev[1].charAt(0).toUpperCase()}`
+}
+
+// Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+// If the input array is empty or null, return an empty array.
+
+function countPositivesSumNegatives(input) {
+  if (input == null || input.length == 0)
+    return [];
+  
+  let positive = 0;
+  let negative = 0;
+  
+  for (let i=0, l=input.length; i<l; ++i)
+  {
+    if (input[i] > 0)
+      ++ positive;
+    else
+      negative += input[i];
+  }
+  
+  return [positive, negative];
+}
