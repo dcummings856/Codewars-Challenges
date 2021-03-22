@@ -377,3 +377,54 @@ function countPositivesSumNegatives(input) {
   
   return [positive, negative];
 }
+
+// You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate 
+// the full number, he has to start counting them from 1.
+
+// As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but 
+// excluding zero.
+
+function monkeyCount(n) {
+  let count = []
+  for (let i = 1; i <= n; i++) {
+    count.push(i)
+  }
+  return count
+}
+
+// Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
+// For example: ["3:1", "2:2", "0:1", ...]
+// Write a function that takes such collection and counts the points of our team in the championship. Rules for counting points for each match:
+// if x>y - 3 points
+// if x<y - 0 point
+// if x=y - 1 point
+
+function points(games) {
+  let total = 0;
+  games.map(game => {
+    if (game[0] === game[2]) {
+      total += 1;
+    } else if (game[0] > game[2]) {
+      total += 3;
+    }
+  });
+  return total;
+}
+
+// Sum all the numbers of the array (in F# and Haskell you get a list) except the highest and the lowest element (the value, not the index!).
+// (The highest/lowest element is respectively only one element at each edge, even if there are more than one with the same value!)
+
+function sumArray(array) {
+  if (array == null) {
+    return 0;
+  } else if (array.length < 2) {
+    return 0;
+  } else {
+    array = array.sort(function(a,b) {return a - b;});
+    var total = 0;
+    for (var i = 1; i < array.length - 1; i++) {
+      total += array[i];
+    }
+    return total;
+  }
+}
