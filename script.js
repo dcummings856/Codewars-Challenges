@@ -428,3 +428,21 @@ function sumArray(array) {
     return total;
   }
 }
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+// Return your answer as a number.
+
+function sumMix(x){
+  let total = 0
+  for (let i = 0; i < x.length; i++) {
+    total += Number(x[i])
+  }
+  return total
+}
+
+// The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down 
+// to the integer (= floored).
+
+function cockroachSpeed(s) {
+  return Math.floor(s * 27.7778)
+}
