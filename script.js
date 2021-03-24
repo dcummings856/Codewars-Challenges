@@ -446,3 +446,27 @@ function sumMix(x){
 function cockroachSpeed(s) {
   return Math.floor(s * 27.7778)
 }
+
+// Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+// In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained
+
+function expressionMatter(a, b, c) {
+  let combo1 = a * (b + c)
+  let combo2 = a * b * c
+  let combo3 = a + b * c
+  let combo4 = (a + b) * c
+  let combo5 = a + b + c
+  let allCombos = [combo1, combo2, combo3, combo4, combo5]
+  return Math.max(...allCombos)
+}
+
+// Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. 
+// The strings will not be the same length, but they may be empty ( length 0 ).
+
+function solution(a, b){
+  if (a.length > b.length) {
+    return b + a + b
+  } else if (a.length < b.length) {
+    return a + b + a
+  }
+}
