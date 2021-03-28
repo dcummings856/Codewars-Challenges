@@ -542,3 +542,35 @@ function divisibleBy(numbers, divisor){
   }
   return nums
 }
+
+// Add the isUpperCase method to String to see whether the string is ALL CAPS.
+
+String.prototype.isUpperCase = function() {
+  if (String(this) === this.toUpperCase()) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+function doubleChar(str) {
+  return str.split('').map(a => {
+    return a + a
+  }).join('')
+}
+
+// Now you have to write a function that takes an argument and returns the square of it.
+
+let square = (num) => {
+  return num * num
+}
+
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+function removeEveryOther(arr){
+  return arr.filter(function(elem, index) {
+    return index % 2 === 0;
+  });
+}
