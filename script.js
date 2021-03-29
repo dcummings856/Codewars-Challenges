@@ -574,3 +574,26 @@ function removeEveryOther(arr){
     return index % 2 === 0;
   });
 }
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+  return s.split('').filter(a => {
+    return a !== '!'
+  }).join('')
+}
+
+// For correct answer program should return int from 0 to 9.
+// Assume test input string always valid and may look like "1 year old" or "5 years old", etc.. The first char is number only.
+
+function getAge(str){
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] > 0) {
+      return Number(str[i])
+    }
+  }
+}
+
+// I have a cat and a dog.
+// I got them at the same time as kitten/puppy. That was humanYears years ago.
+// Return their respective ages now as [humanYears,catYears,dogYears]
