@@ -624,3 +624,30 @@ const humanYearsCatYearsDogYears = (humanYears) => {
 function oddCount(n){
   return Math.floor(n/2);
 }
+
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+function squareDigits(num){
+  let a = num.toString().split("").map(number => Math.pow(number, 2)).join('')
+  return Number(a)
+}
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+function highAndLow(numbers){
+  let numArr = numbers.split(" ")
+  let min = Math.min(...numArr)
+  let max = Math.max(...numArr)
+  return `${max} ${min}`
+}
+
+// This time no story, no theory. The examples below show you how to write function accum:
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+function accum(s) {
+  return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
