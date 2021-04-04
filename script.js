@@ -658,3 +658,59 @@ function accum(s) {
 function findShort(s){
   return Math.min(...s.split(" ").map (s => s.length));
 }
+
+// You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+// Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that 
+// the animal is the right way round (head, body, tail).
+// Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics
+
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+}
+
+// The code gives an error!
+// a = 123.toString
+// Fix it!
+
+var a = '123';
+
+// When provided with a number between 0-9, return it in words.
+// Input :: 1
+// Output :: "One".
+
+function switchItUp(number){
+  switch(number) {
+      case 0:
+      return 'Zero'
+      break
+      case 1:
+      return 'One'
+      break
+      case 2:
+      return 'Two'
+      break
+      case 3:
+      return 'Three'
+      break
+      case 4:
+      return 'Four'
+      break
+      case 5:
+      return 'Five'
+      break
+      case 6:
+      return 'Six'
+      break
+      case 7:
+      return 'Seven'
+      break
+      case 8:
+      return 'Eight'
+      break
+      case 9:
+      return 'Nine'
+      break
+      default:
+      return 'not a number'
+  }
+}
