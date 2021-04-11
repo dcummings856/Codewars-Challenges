@@ -730,3 +730,24 @@ function divide(weight){
 function filter_list(l) {
   return l.filter(x => {return typeof x == 'number'})
 }
+
+// Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+
+const phrases = [
+  'I love you',
+  'a little',
+  'a lot',
+  'passionately',
+  'madly',
+  'not at all',
+]
+
+function howMuchILoveYou(n) {
+   return phrases[(n - 1) % phrases.length] 
+}
+
+// This code should store "codewa.rs" as a variable called name but it's not working. Can you figure out why?
+
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
