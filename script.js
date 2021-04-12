@@ -751,3 +751,29 @@ function howMuchILoveYou(n) {
 var a = "code";
 var b = "wa.rs";
 var name = a + b;
+
+// You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to 
+// green again.
+// Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state 
+// the light should change to.
+
+function updateLight(current) {
+  if (current == 'green') {
+    return 'yellow'
+  } else if (current == 'yellow') {
+    return 'red'
+  } else if (current == 'red') {
+    return 'green'
+  }
+}
+
+// Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 
+// 0 to n (inclusive).
+
+function powersOfTwo(n){
+  var result = [];
+  for (var i = 0; i <= n; i++) {
+    result.push(Math.pow(2, i));
+  }
+  return result;
+}
