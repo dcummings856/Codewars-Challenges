@@ -777,3 +777,32 @@ function powersOfTwo(n){
   }
   return result;
 }
+
+// Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+// Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+// -If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+// -If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+
+function hoopCount (n) {
+  return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it'
+}
+
+// Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+// If no occurrences can be found, a count of 0 should be returned.
+
+function strCount(str, letter){ 
+  let count = 0
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == letter)
+      count += 1
+  }
+  return count
+}
+
+// Since we cannot define keywords in Javascript (well, at least I don't know how to do it), your task is to define a function xor(a, b) where a and b are 
+// the two expressions to be evaluated. Your xor function should have the behaviour described above, returning true if exactly one of the two expressions 
+// evaluate to true, false otherwise.
+
+function xor(a, b) {
+  return a != b;
+}
