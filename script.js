@@ -806,3 +806,26 @@ function strCount(str, letter){
 function xor(a, b) {
   return a != b;
 }
+
+// Inspired by the development team at Vooza, write the function howManyLightsabersDoYouOwn/how_many_light_sabers_do_you_own that
+// accepts the name of a programmer, and
+// returns the number of lightsabers owned by that person.
+// The only person who owns lightsabers is Zach, by the way. He owns 18, which is an awesome number of lightsabers. Anyone else owns 0.
+
+function howManyLightsabersDoYouOwn(name) {
+  return name == 'Zach' ? 18 : 0
+}
+
+// Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
+// The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
+// Upper or lower case letter does not matter -- "eNglisH" is also correct.
+// Return value as boolean values, true for the string to contains "English", false for it does not.
+
+function spEng(sentence){
+  if (sentence.toLowerCase().match(/english/g)) {
+    return true
+  } else {
+    return false
+  } 
+}
+
