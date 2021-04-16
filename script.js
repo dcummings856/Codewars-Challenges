@@ -837,3 +837,8 @@ function twoSort(s) {
   return s.sort()[0].split('').join('***');
 }
 
+// Return the Nth Even Number
+
+function nthEven(n){
+  return (n-1)*2;
+}
