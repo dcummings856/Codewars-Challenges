@@ -861,3 +861,29 @@ function isPalindrome(line) {
 function formatMoney(amount){
   return '$' + amount.toFixed(2);
 }
+
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only 
+// letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+function isIsogram(str){
+  var i, j;
+  str = str.toLowerCase();
+  for(i = 0; i < str.length; ++i)
+    for(j = i + 1; j < str.length; ++j)
+      if(str[i] === str[j])
+        return false;
+  return true;
+}
+
+// Given two integers a and b, which can be positive or negative, find the sum of all the integers between including them too and return it. If the two numbers 
+// are equal return a or b.
+
+function getSum( a,b ){
+  let min = Math.min(a, b)
+  let max = Math.max(a, b)
+  let sum = 0
+  for (let i = min; i <= max; i++) {
+    sum += i
+  }
+  return sum
+}
