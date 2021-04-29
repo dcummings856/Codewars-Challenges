@@ -919,3 +919,15 @@ function isTriangle(a,b,c)
    return a + b > c && a + c > b && c + b > a;
 }
 
+// Create a method take that accepts a list/array and a number n, and returns a list/array array of the first n elements from the list/array.
+
+function take(arr, n) {
+  return arr.splice(0, n)
+}
+
+// Write a function to get the first elements of asequence. Passing a parameter n (default=1) will return the first n elements of the sequence.
+// If n == 0 return an empty sequence []
+
+function first(arr, n=1) {
+  return arr.slice(0,n);
+}
