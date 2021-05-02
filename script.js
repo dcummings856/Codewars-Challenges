@@ -931,3 +931,16 @@ function take(arr, n) {
 function first(arr, n=1) {
   return arr.slice(0,n);
 }
+
+// Define a function that removes duplicates from an array of numbers and returns it as a result.
+// The order of the sequence has to stay the same.
+
+function distinct(a) {
+  if (a.length <= 1) {
+    return a
+  } else {
+    if (a.length > 1) {
+      return a.filter((x, i) => a.indexOf(x) == i)
+    }
+  }
+}
