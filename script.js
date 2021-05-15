@@ -1045,3 +1045,15 @@ function domainName(url){
   url = url.replace("www.", '')
   return url.split('.')[0]
 }
+
+// You are given a positive integer x and you should perform n operations, where on the ith operation you increase x in such a way that its new value is 
+// divisible by i (operations are numbered from 1 to n).
+
+// Your task is to find the minimal value of x you can obtain by performing n operations described above.
+
+function increasingNumber(x, n) {
+  for (let i = 2; i <= n; i++)
+    while (x % i)
+      x++;
+  return x;
+}
