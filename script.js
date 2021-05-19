@@ -1097,3 +1097,11 @@ function finalGrade (exam, projects) {
   if(exam > 50 & projects >= 2) return 75;
   return 0;
 }
+
+// Create a function that takes 2 positive integers in form of a string as an input, and outputs the sum.
+
+function sumStr(a,b) {
+  let num1 = Number(a)
+  let num2 = Number(b)
+  return String(num1 + num2)
+}
