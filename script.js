@@ -1105,3 +1105,14 @@ function sumStr(a,b) {
   let num2 = Number(b)
   return String(num1 + num2)
 }
+
+// Your goal is to return multiplication table for number that is always an integer from 1 to 10.
+
+function multiTable(num) {
+  let table = '';
+  for (let i = 1; i < 11; i++){
+    table += `${i} * ${num} = ${num * i}`;
+    if(i < 10) table += '\n';
+  }
+  return table;
+}
