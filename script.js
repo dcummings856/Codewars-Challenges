@@ -1149,3 +1149,9 @@ function removeSmallest(numbers) {
   numbers.splice(numbers.indexOf(min), 1);
   return numbers;
 }
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
