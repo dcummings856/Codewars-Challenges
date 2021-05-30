@@ -1163,3 +1163,30 @@ function minMax(arr){
 function oddOrEven(array) {
   return array.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
 }
+
+// Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer.
+// Square all numbers k (0 <= k <= n) between 0 and n.
+// Count the numbers of digits d used in the writing of all the k**2.
+// Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
+
+function nbDig(n, d) {
+  var res=0;
+      for (var g=0;g<=n;g++){
+        var square=(g*g+"").split("");
+        square.forEach((s)=>s==d?res++:null)
+      }return res;
+  }
+
+// An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+// Note: anagrams are case insensitive
+// Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+const isAnagram = function(test, original) {
+  let a = test.toLowerCase().split("").sort().join()
+  let b = original.toLowerCase().split("").sort().join()
+  if (a == b) {
+    return true
+  } else {
+    return false
+  }
+}
