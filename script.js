@@ -1209,3 +1209,28 @@ function calculateYears(principal, interest, tax, desired) {
   }
   return years
 }
+
+// Write a function that given a floor in the american system returns the floor in the european system.
+
+function getRealFloor(n) {
+  if (n < 0) {
+    return n
+  } else if (n <= 1) {
+    return 0
+  } else if (n >= 13) {
+    return n - 2
+  } else {
+    return n - 1
+  }
+}
+
+// Your goal in this kata is to create complete the mouth_size method this method take one argument animal which corresponds to the animal encountered by frog.
+// If this one is an alligator (case insensitive) return small otherwise return wide.
+
+function mouthSize(animal) {
+  if (animal.toLowerCase() == 'alligator') {
+    return 'small'
+  } else {
+    return 'wide'
+  }
+}
