@@ -1250,3 +1250,19 @@ function plural(n) {
 var TempleStrings = function(obj, feature) {
   return `${obj} are ${feature}`
 }
+
+// You will be given a list of strings, a transcript of an English Shiritori match. Your task is to find out if the game ended early, and return a list that contains every valid
+//  string until the mistake. If a list is empty return an empty list. If one of the elements is an empty string, that is invalid and should be handled.
+
+function shiritori(words) {
+
+  if (!words.length || words[0] === '')
+    return [];
+  
+  for (let i = 1; i < words.length; i++)
+    if (words[i - 1].slice(-1) !== words[i][0])
+      return words.slice(0, i);
+  
+  return words;
+  
+}
