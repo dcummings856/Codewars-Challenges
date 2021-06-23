@@ -1284,3 +1284,9 @@ function isVow(a){
 // There is an object/class already created called MrFreeze. Mark this object as frozen so that no other changes can be made to it.
 
 Object.freeze(MrFreeze)
+
+// Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+function sumOfDifferences(arr) {
+  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+}
