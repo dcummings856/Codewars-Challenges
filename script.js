@@ -1302,3 +1302,11 @@ function capitalizeWord(word) {
   return upperCase + word.slice(1)
 }
 
+// Write a simple regex to validate a username. Allowed characters are:
+// lowercase letters,
+// numbers,
+// underscore
+
+function validateUsr(username) {
+  return /^[0-9a-z_]{4,16}$/.test(username)
+}
