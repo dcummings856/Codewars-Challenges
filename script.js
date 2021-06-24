@@ -1310,3 +1310,9 @@ function capitalizeWord(word) {
 function validateUsr(username) {
   return /^[0-9a-z_]{4,16}$/.test(username)
 }
+
+// Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+function addBinary(a,b){
+  return (a+b).toString(2)
+}
