@@ -1316,3 +1316,13 @@ function validateUsr(username) {
 function addBinary(a,b){
   return (a+b).toString(2)
 }
+
+// The goal is to create a function 'numberToPower(number, power)' that "raises" the number up to power (ie multiplies number by itself power times).
+
+function numberToPower(number, power){
+  let result = 1
+  for (let i = 0; i < power; i++) {
+    result *= number
+  }
+  return result
+}
