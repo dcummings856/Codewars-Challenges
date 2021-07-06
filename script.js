@@ -1366,3 +1366,11 @@ function usdcny(usd) {
 function toCsvText(array) {
   return array.join('\n')
 }
+
+// Write a function that takes two arguments, ppg (points per game) and mpg (minutes per game) and returns a straight extrapolation of ppg per 48 minutes rounded 
+// to the nearest tenth. Return 0 if 0.
+
+function pointsPer48(ppg, mpg) {
+  let number = ((48 / mpg) * ppg)
+  return +number.toFixed(1) || 0
+}
