@@ -1390,3 +1390,12 @@ function breakChocolate(n,m) {
 const binaryArrayToNumber = arr => {
   return parseInt(arr.join(""), 2)
 };
+
+// You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+// Complete the method which accepts such an array, and returns that single different number.
+
+function stray(nums){
+  let max = Math.max(...nums);
+  let min = Math.min(...nums);
+  return nums.filter(x => x == max).length == 1 ? max : min
+}
