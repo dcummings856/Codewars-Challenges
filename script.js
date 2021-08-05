@@ -1399,3 +1399,14 @@ function stray(nums){
   let min = Math.min(...nums);
   return nums.filter(x => x == max).length == 1 ? max : min
 }
+
+// Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+function solution(nums){
+  if (nums == null) {
+    return []
+  }
+  return nums.sort((a, b) => {
+    return a - b
+  })
+}
