@@ -1457,3 +1457,15 @@ function longest(s1, s2) {
   })
   return s4.join("")
 }
+
+// Count the number of divisors of a non-negative integer n.
+
+function getDivisorsCnt(n){
+  let count = 0
+  for (let i = n; i > 0; i--) {
+    if (n % i == 0) {
+      count++
+    }
+  }
+  return count
+}
