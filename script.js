@@ -1505,3 +1505,10 @@ function evaporator(content, evap_per_day, threshold){
   evap_per_day = evap_per_day / 100
   return  Math.ceil(Math.log(threshold) / Math.log(1-evap_per_day))
 }
+
+
+// Unfortunately, something is wrong with the instructions in the function body. Your job is to fix it so the function returns correctly formatted quotes.
+
+function quotable(name, quote){
+  return `${name} said: "${quote}"`
+}
