@@ -1512,3 +1512,11 @@ function evaporator(content, evap_per_day, threshold){
 function quotable(name, quote){
   return `${name} said: "${quote}"`
 }
+
+// Who is the No.1 programmer on Codewars? Yes, Of course, his name is myjinxin2015. Wow, please don't throw tomatoes and stinky eggs ;-)
+// Unfortunately, due to site failures (or hacker attacks?), The leaderboard often shows incorrect rankings.
+// Your task is: accept a string leaderBoard as argument, correct it and output it.
+
+function correct(s){
+  return s.replace(/myjinxin2015/,s.match(/#1 (.+)(?=\n|$)/)[1]).replace(/#1 .+(?=\n|$)/,'#1 myjinxin2015')
+}
