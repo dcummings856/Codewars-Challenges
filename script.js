@@ -1520,3 +1520,25 @@ function quotable(name, quote){
 function correct(s){
   return s.replace(/myjinxin2015/,s.match(/#1 (.+)(?=\n|$)/)[1]).replace(/#1 .+(?=\n|$)/,'#1 myjinxin2015')
 }
+
+// Return an array containing the numbers from 1 to N, where N is the parametered value.
+// Replace certain values however if any of the following conditions are met:
+// If the value is a multiple of 3: use the value "Fizz" instead
+// If the value is a multiple of 5: use the value "Buzz" instead
+// If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead
+
+function fizzbuzz(n){
+  let results = []
+  for(let i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0){
+      results.push("FizzBuzz")
+    } else if (i % 3 == 0) {
+      results.push("Fizz")
+    } else if (i % 5 == 0) {
+      results.push("Buzz")
+    } else {
+      results.push(i)
+    }
+  }
+  return results
+}
