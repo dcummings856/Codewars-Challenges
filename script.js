@@ -1565,3 +1565,12 @@ function billboard(name, price = 30){
     return a.reduce( (sum, el) => sum + el ** 2, 0) >
            b.reduce( (sum, el) => sum + el ** 3, 0)
   }
+
+  // Write a function that always returns 5
+  // Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+  // Good luck :)
+
+  function unusualFive() {
+    let word = 'aerts'
+    return word.length
+  }
