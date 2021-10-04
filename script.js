@@ -1574,3 +1574,14 @@ function billboard(name, price = 30){
     let word = 'aerts'
     return word.length
   }
+
+  // Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+  function remove(s){
+    //coding and coding....
+    if (s.charAt(s.length - 1) == '!') {
+      return s.slice(0, -1)
+    } else {
+      return s 
+    }
+  }
