@@ -1484,9 +1484,6 @@ function arithmetic(a, b, operator){
   } else if (operator == "divide") {
     return a / b
   }
-<<<<<<< HEAD
-} 
-=======
 }
 
 // Your job is to write a function to score a game of code golf by Johnny's rules. The rules for scoring are as follows:
@@ -1608,4 +1605,3 @@ function billboard(name, price = 30){
     }
     return res.length;
   }
->>>>>>> b369e3f256395d40d80fd7f002a02d562cae2a34
