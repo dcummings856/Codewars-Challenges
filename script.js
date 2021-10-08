@@ -1484,4 +1484,128 @@ function arithmetic(a, b, operator){
   } else if (operator == "divide") {
     return a / b
   }
+<<<<<<< HEAD
 } 
+=======
+}
+
+// Your job is to write a function to score a game of code golf by Johnny's rules. The rules for scoring are as follows:
+// all whitespace characters are counted as 0 strokes
+// consecutive alphanumeric characters (includes underscore) are grouped together, and the group counts as 1 stroke
+// non-alphanumeric characters (except underscore) are each counted as 1 stroke
+// Your function will be passed a string. You should calculate the number of strokes from the string and return the score as an integer.
+
+function golfScore(code) {
+  return (code.match(/\w+|\S/g) || []).length
+}
+
+// We know the content of the evaporator (content in ml), the percentage of foam or gas lost every day (evap_per_day) and the threshold (threshold) in percentage beyond 
+// which the evaporator is no longer useful. All numbers are strictly positive.
+// The program reports the nth day (as an integer) on which the evaporator will be out of use.
+
+function evaporator(content, evap_per_day, threshold){ 
+  threshold = threshold / 100
+  evap_per_day = evap_per_day / 100
+  return  Math.ceil(Math.log(threshold) / Math.log(1-evap_per_day))
+}
+
+
+// Unfortunately, something is wrong with the instructions in the function body. Your job is to fix it so the function returns correctly formatted quotes.
+
+function quotable(name, quote){
+  return `${name} said: "${quote}"`
+}
+
+// Who is the No.1 programmer on Codewars? Yes, Of course, his name is myjinxin2015. Wow, please don't throw tomatoes and stinky eggs ;-)
+// Unfortunately, due to site failures (or hacker attacks?), The leaderboard often shows incorrect rankings.
+// Your task is: accept a string leaderBoard as argument, correct it and output it.
+
+function correct(s){
+  return s.replace(/myjinxin2015/,s.match(/#1 (.+)(?=\n|$)/)[1]).replace(/#1 .+(?=\n|$)/,'#1 myjinxin2015')
+}
+
+// Return an array containing the numbers from 1 to N, where N is the parametered value.
+// Replace certain values however if any of the following conditions are met:
+// If the value is a multiple of 3: use the value "Fizz" instead
+// If the value is a multiple of 5: use the value "Buzz" instead
+// If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead
+
+function fizzbuzz(n){
+  let results = []
+  for(let i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0){
+      results.push("FizzBuzz")
+    } else if (i % 3 == 0) {
+      results.push("Fizz")
+    } else if (i % 5 == 0) {
+      results.push("Buzz")
+    } else {
+      results.push(i)
+    }
+  }
+  return results
+}
+
+// You can print your name on a billboard ad. Find out how much it will cost you. Each letter has a default price of £30, but that can be different if you are 
+// given 2 parameters instead of 1.
+// You can not use multiplier "*" operator.
+
+function billboard(name, price = 30){
+
+  var totalCost = 0;
+  for(i=0; i<name.length; i++){
+      totalCost += price;
+  } 
+  
+  return totalCost;
+  
+  }
+
+  // Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater 
+  // than the sum of the cubes of each element in b.
+
+  function arrayMadness(a, b) {
+    return a.reduce( (sum, el) => sum + el ** 2, 0) >
+           b.reduce( (sum, el) => sum + el ** 3, 0)
+  }
+
+  // Write a function that always returns 5
+  // Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+  // Good luck :)
+
+  function unusualFive() {
+    let word = 'aerts'
+    return word.length
+  }
+
+  // Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+  function remove(s){
+    //coding and coding....
+    if (s.charAt(s.length - 1) == '!') {
+      return s.slice(0, -1)
+    } else {
+      return s 
+    }
+  }
+
+  // Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
+
+  function combat(health, damage) {
+    if (health - damage < 0) {
+      return 0
+    } else {
+      return health - damage
+    }
+  }
+
+  // In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers with a 5 in it. The start and the end number are both inclusive!
+
+  function dontGiveMeFive(start, end){
+    let res = [];
+    for (let i = start; i <= end; i++) {
+      if (!i.toString().includes('5')) res.push(i);
+    }
+    return res.length;
+  }
+>>>>>>> b369e3f256395d40d80fd7f002a02d562cae2a34

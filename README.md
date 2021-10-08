@@ -1,2 +1,2 @@
 # Codewars-Challenges
-repo for codewars challenges I complete
+repository for code wars challenges
