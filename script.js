@@ -1558,50 +1558,43 @@ function billboard(name, price = 30){
   
   }
 
-  // Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater 
-  // than the sum of the cubes of each element in b.
-
-  function arrayMadness(a, b) {
-    return a.reduce( (sum, el) => sum + el ** 2, 0) >
-           b.reduce( (sum, el) => sum + el ** 3, 0)
+// Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element  a is strictly greater 
+// than the sum of the cubes of each element in b.
+function arrayMadness(a, b) {
+  return a.reduce( (sum, el) => sum + el ** 2, 0) >
+         b.reduce( (sum, el) => sum + el ** 3, 0)
+}
+// Write a function that always returns 5
+// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+// Good luck :)
+function unusualFive() {
+  let word = 'aerts'
+  return word.length
+}
+// Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no ed to verify it.
+function remove(s){
+  //coding and coding....
+  if (s.charAt(s.length - 1) == '!') {
+    return s.slice(0, -1)
+  } else {
+    return s 
   }
-
-  // Write a function that always returns 5
-  // Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
-  // Good luck :)
-
-  function unusualFive() {
-    let word = 'aerts'
-    return word.length
+}
+// Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new alth. Health can't be less than 0.
+function combat(health, damage) {
+  if (health - damage < 0) {
+    return 0
+  } else {
+    return health - damage
   }
-
-  // Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
-
-  function remove(s){
-    //coding and coding....
-    if (s.charAt(s.length - 1) == '!') {
-      return s.slice(0, -1)
-    } else {
-      return s 
-    }
+}
+// In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers th a 5 in it. The start and the end number are both inclusive!
+function dontGiveMeFive(start, end){
+  let res = [];
+  for (let i = start; i <= end; i++) {
+    if (!i.toString().includes('5')) res.push(i);
   }
-
-  // Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
-
-  function combat(health, damage) {
-    if (health - damage < 0) {
-      return 0
-    } else {
-      return health - damage
-    }
-  }
-
-  // In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers with a 5 in it. The start and the end number are both inclusive!
-
-  function dontGiveMeFive(start, end){
-    let res = [];
-    for (let i = start; i <= end; i++) {
-      if (!i.toString().includes('5')) res.push(i);
-    }
-    return res.length;
-  }
+  return res.length;
+}
+ 
+// 
