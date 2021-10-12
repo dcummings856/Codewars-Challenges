@@ -1615,7 +1615,6 @@ function findSum(n) {
   return sum
 }
 
-
 // Write a function that rearranges an integer into its largest possible value.
 // Example (Input --> Output)
 // 123456 --> 654321
@@ -1625,4 +1624,11 @@ function findSum(n) {
 
 function superSize(n){
   return parseInt(n.toString().split('').sort().reverse().join(''))
+}
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+function replace(s){
+  //coding and coding....
+  return s.replace(/[aeiou]/ig, (m, i) => "!")
 }
