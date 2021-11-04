@@ -1709,3 +1709,10 @@ var greet_ben = function() {
 // After your code executes the websites array should == ["codewars"]
 
 websites.push("codewars")
+
+// We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new Javascript Object setting the 
+// 'value' key on the new Object to the passed-in value.
+
+function wrap(value) {
+  return { value: value }
+}
