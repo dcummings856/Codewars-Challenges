@@ -1759,3 +1759,14 @@ function getMax2(){
 function getNames(data){
   return data.map(function(item){return item.name})
 }
+
+// Refactor the following code so that it belongs to a Person class/object. Each Person instance will have 
+// a greet method. The Person instance should be instantiated with a name so that it no longer has to be passed into each greet method call
+
+function Person(name){
+  this.name = name
+}
+
+Person.prototype.greet = function(yourName){
+  return "Hello " + yourName + ", my name is " + this.name
+}
