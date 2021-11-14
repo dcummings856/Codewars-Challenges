@@ -1786,3 +1786,5 @@ function Warrior(n){
 Warrior.prototype.toString = function(){
     return "Hi! my name's "+this.name();
 }
+
+// 
